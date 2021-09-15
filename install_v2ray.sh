@@ -1,6 +1,6 @@
 #unzip v2ray-linux-64.zip
 
-rm -rf ./temp
+rm -rf ./temp #删除临时文件夹
 git clone https://github.com/zhangpengfic/v2ray_model -b "main" ./temp --depth=1
 
 cd temp
@@ -12,3 +12,4 @@ cp -rf systemd/v2ray.service /etc/systemd/system/ # 移动文件
 systemctl enable v2ray # 用于程序开机启动并且崩溃时自动重启程序
 systemctl restart v2ray
 cd ..
+rm -rf ./temp #删除临时文件夹
