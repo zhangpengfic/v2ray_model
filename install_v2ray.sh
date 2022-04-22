@@ -11,5 +11,6 @@ cp -rf vpoint_vmess_freedom-try.json /etc/v2ray/config.json #仅创建配置文�
 cp -rf systemd/v2ray.service /etc/systemd/system/ # 移动文件
 systemctl enable v2ray # 用于程序开机启动并且崩溃时自动重启程序
 systemctl restart v2ray
+systemctl restart nginx
 cd ..
 rm -rf ./temp #删除临时文件夹
