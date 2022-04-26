@@ -3,6 +3,17 @@
 rm -rf ./temp #删除临时文件夹
 git clone https://github.com/zhangpengfic/v2ray_model -b "main" ./temp --depth=1
 
+#caddy
+curl -sS https://webinstall.dev/caddy | bash
+touch ~/Caddyfile
+echo 'racknerd.btcoin.tk {'>>~/Caddyfile
+echo '   root * /www/wwwroot/racknerd.btcoin.tk'>>~/Caddyfile
+echo '   reverse_proxy /zp localhost:56331'>>~/Caddyfile
+echo '   file_server'>>~/Caddyfile
+echo '}'>>~/Caddyfile
+caddy run
+
+#v2ray
 cd temp
 mkdir -p /etc/v2ray /usr/bin/v2ray /var/log/v2ray # 创建目录
 chmod +x v2ray v2ctl # 赋予可执行权限
