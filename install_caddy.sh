@@ -1,7 +1,7 @@
 #unzip v2ray-linux-64.zip
 
 #caddy
-curl -sS https://webinstall.dev/caddy | bash
+#curl -sS https://webinstall.dev/caddy | bash
 rm -rf ~/Caddyfile
 touch ~/Caddyfile
 echo $1' {'>>~/Caddyfile
