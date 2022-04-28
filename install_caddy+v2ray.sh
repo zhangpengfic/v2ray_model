@@ -4,8 +4,8 @@
 curl -sS https://webinstall.dev/caddy | bash
 rm -rf ~/Caddyfile
 touch ~/Caddyfile
-echo 'th1.store {'>>~/Caddyfile
-echo '   root * /www/wwwroot/th1.store'>>~/Caddyfile
+echo $1' {'>>~/Caddyfile
+echo '   root * /www/wwwroot/caddy'>>~/Caddyfile
 echo '   reverse_proxy /zp localhost:56331'>>~/Caddyfile
 echo '   file_server'>>~/Caddyfile
 echo '}'>>~/Caddyfile

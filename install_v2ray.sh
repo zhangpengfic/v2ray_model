@@ -1,8 +1,8 @@
 #unzip v2ray-linux-64.zip
 
 #v2ray
-rm -rf ./temp #删除临时文件夹
-git clone https://github.com/zhangpengfic/v2ray_model -b "main" ./temp --depth=1
+#rm -rf ./temp #删除临时文件夹
+#git clone https://github.com/zhangpengfic/v2ray_model -b "main" ./temp --depth=1
 cd temp
 mkdir -p /etc/v2ray /usr/bin/v2ray /var/log/v2ray # 创建目录
 chmod +x v2ray v2ctl # 赋予可执行权限
