@@ -4,6 +4,7 @@
 #curl -sS https://webinstall.dev/caddy | bash
 rm -rf ~/Caddyfile
 touch ~/Caddyfile
+touch /www/wwwroot/caddy/index.html
 echo $1' {'>>~/Caddyfile
 echo '   root * /www/wwwroot/caddy'>>~/Caddyfile
 echo '   reverse_proxy /zp localhost:56331'>>~/Caddyfile
