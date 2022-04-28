@@ -4,6 +4,7 @@
 curl -sS https://webinstall.dev/caddy | bash
 rm -rf ~/Caddyfile
 touch ~/Caddyfile
+mkdir -p /www/wwwroot/caddy
 rm -rf /www/wwwroot/caddy/index.html
 touch /www/wwwroot/caddy/index.html
 echo $1' {'>>~/Caddyfile
